@@ -1159,6 +1159,7 @@ class DiffusionPipeline(ConfigMixin, PushToHubMixin):
 
             if name in self._exclude_from_cpu_offload:
                 model.to(device)
+                print(name)
             else:
                 # make sure to offload buffers if not all high level weights
                 # are of type nn.Module
