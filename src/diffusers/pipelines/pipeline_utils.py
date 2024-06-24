@@ -1154,6 +1154,7 @@ class DiffusionPipeline(ConfigMixin, PushToHubMixin):
                 device_mod.empty_cache()  # otherwise we don't see the memory savings (but they probably exist)
 
         for name, model in self.components.items():
+            print(name)
             if not isinstance(model, torch.nn.Module):
                 continue
 
